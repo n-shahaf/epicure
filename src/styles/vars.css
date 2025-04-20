@@ -10,9 +10,12 @@
     --clr-gray-80: hsl(0, 0%, 80%);
     --clr-gray-90: hsl(0, 0%, 90%);
 
-    --clr-primary: #bbb;
-    --clr-secondary: #bbb;
-    --clr-accent: #bbb;
+    --clr-primary: #000000;
+    --clr-primary-light: #979797;
+    --clr-secondary: #F9F4EA;
+    --clr-secondary-light: #FAFAFA;
+    --clr-secondary-dark: #E19D1A;
+    --clr-text: black;
 
     /* BREAKPOINTS */
     --breakpoint-xsmall: 320px;
@@ -24,5 +27,5 @@
 
     /* COLORS */
     --background: #ffffff;
-    --foreground: #171717;
+    --clr-card-background: var(--clr-secondary);
 }
