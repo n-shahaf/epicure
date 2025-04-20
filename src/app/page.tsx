@@ -1,6 +1,8 @@
-import styles from "./page.module.scss"
-export default function HomePage() {
+import styles from "@/app/page.module.scss"
+
+const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>page</div>
   )
 }
+export default HomePage
