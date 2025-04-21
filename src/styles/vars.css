@@ -28,4 +28,7 @@
     /* COLORS */
     --background: #ffffff;
     --clr-card-background: var(--clr-secondary);
+
+    /* LAYOUT VERIABLES */
+    --header-height: 46px;
 }
