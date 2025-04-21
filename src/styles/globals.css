@@ -11,3 +11,11 @@
 .icon {
     cursor: pointer;
 }
+
+.icon-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+}

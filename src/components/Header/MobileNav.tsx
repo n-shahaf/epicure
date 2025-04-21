@@ -2,19 +2,20 @@ import styles from '@/components/Header/MobileNav.module.scss'
 import clsx from 'clsx'
 import Link from 'next/link'
 import CloseIcon from '@/assets/icons/CloseIcon.svg'
-
-export const navLinks = [{ address: '/restaurants', name: 'Restaurants' }, { address: '/chefs', name: 'Chefs' }]
+import { navLinks } from '@/components/Header/Header.constant'
 
 type MobileNavProps = {
     isMenuOpen: boolean
-    closeNav: () => void
+    closeMenu: () => void
 }
 
-const MobileNav = ({ isMenuOpen, closeNav }: MobileNavProps) => {
+const MobileNav = ({ isMenuOpen, closeMenu }: MobileNavProps) => {
     return (
         <nav className={clsx(styles.mobileNav, isMenuOpen && styles.open)}>
             <div className={styles.mobileNavHeader}>
-                <CloseIcon className={styles.closeIcon} onClick={closeNav} />
+                <button className='icon-button-wrapper' onClick={closeMenu}>
+                    <CloseIcon className={styles.closeIcon} />
+                </button>
             </div>
             <ul className={styles.linkList}>
                 {navLinks.map((link) => (

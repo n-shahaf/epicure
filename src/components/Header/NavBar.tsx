@@ -1,3 +1,4 @@
+'use client'
 import styles from '@/components/Header/NavBar.module.scss'
 import HamburgerIcon from '@/assets/icons/HamburgerIcon.svg'
 import SearchIcon from '@/assets/icons/SearchIcon.svg'
@@ -7,19 +8,29 @@ import Logo from '@/assets/icons/Logo.svg'
 import { useRouter } from 'next/navigation'
 
 type NavBarProps = {
-    openNav: () => void
+    openMenu: () => void
 }
 
-const NavBar = ({ openNav }: NavBarProps) => {
+const NavBar = ({ openMenu }: NavBarProps) => {
     const router = useRouter()
     return (
         <nav className={styles.navbar}>
-            <HamburgerIcon className={styles.menuIcon} onClick={openNav} />
-            <Logo className={styles.logoIcon} onClick={() => router.push('/')} />
+            <button className='icon-button-wrapper' onClick={openMenu} >
+                <HamburgerIcon className={styles.menuIcon} />
+            </button>
+            <button className='icon-button-wrapper' onClick={() => router.push('/')} >
+                <Logo className={styles.logoIcon} />
+            </button>
             <div className={styles.iconGroup}>
-                <SearchIcon />
-                <UserIcon />
-                <BagIcon />
+                <button className='icon-button-wrapper'>
+                    <SearchIcon />
+                </button>
+                <button className='icon-button-wrapper'>
+                    <UserIcon />Í
+                </button>
+                <button className='icon-button-wrapper'>
+                    <BagIcon />
+                </button>
             </div>
         </nav>
     )
