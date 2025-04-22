@@ -1,0 +1,44 @@
+.button {
+    min-width: 206px;
+    min-height: 48px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+
+}
+
+.primary {
+    background-color: var(--clr-primary);
+
+    &:hover {
+        background-color: var(--clr-primary-light);
+    }
+}
+
+.secondary {
+    border: 1px solid var(--clr-primary);
+    background-color: transparent;
+    color: black;
+
+
+    &:hover {
+        color: white;
+        border: 1px solid var(--clr-primary-light);
+        background-color: var(--clr-primary);
+    }
+}
+
+.button.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button.disabled {
+    background-color: var(--clr-gray-80);
+    color: var(--clr-gray-20);
+    pointer-events: none;
+}
