@@ -4,7 +4,6 @@
     padding-block: 32px 20px;
     padding-inline: 20px;
 
-    .nav {}
 
     .navLinks {
         display: flex;
@@ -17,4 +16,19 @@
         font-weight: 200;
         cursor: pointer;
     }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        justify-content: center;
+        align-items: center;
+        height: 85px;
+        padding: 0;
+
+        .navLinks {
+            flex-direction: row;
+        }
+    }
+
+
 }

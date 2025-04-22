@@ -7,8 +7,8 @@ const Footer = () => {
         <footer className={styles.footer}>
             <nav className={styles.nav}>
                 <ul className={styles.navLinks}>
-                    {FOOTER_LINKS.map((link, index) => (
-                        <li key={index} className={styles.navItem}>
+                    {FOOTER_LINKS.map((link) => (
+                        <li key={link.name} className={styles.navItem}>
                             <Link href={link.path}>
                                 {link.name}
                             </Link>
