@@ -31,4 +31,13 @@
 
     /* LAYOUT VERIABLES */
     --header-height: 46px;
+    --section-padding-inline: 20px;
+    --section-margin-block: 0 48px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --section-padding-inline: 40px;
+        --section-margin-block: 0 80px;
+    }
 }

@@ -1,0 +1,15 @@
+.carousel {
+    overflow: hidden;
+}
+
+
+.carouselContainer {
+    display: flex;
+}
+
+.carouselSlide {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-right: 40px;
+}

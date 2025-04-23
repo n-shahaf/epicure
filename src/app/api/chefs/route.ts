@@ -1,10 +1,6 @@
 import { chefs } from '@/data/chefs.data'
+import { NextResponse } from 'next/server'
 
 export function GET() {
-    return new Response(JSON.stringify(chefs), {
-        status: 200,
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
+    return NextResponse.json(chefs, { status: 200 })
 }

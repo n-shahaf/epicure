@@ -1,6 +1,8 @@
 import styles from '@/components/Hero/Hero.module.scss'
 import { HeroContent } from '@/constants/hero.constant'
+
 const Hero = () => {
+
     return (
         <div className={styles.heroSection}>
             <div className={styles.content}>

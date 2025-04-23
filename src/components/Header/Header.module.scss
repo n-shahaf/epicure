@@ -2,5 +2,11 @@
     height: 46px;
     display: flex;
     align-items: center;
-    padding-inline: 20px;
+    padding-inline: var(--section-padding-inline);
+}
+
+@media (min-width: 768px) {
+    .header {
+        height: 64px;
+    }
 }
