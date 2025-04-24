@@ -4,11 +4,12 @@ import clsx from 'clsx'
 
 type RatingProps = {
     rating: number
-    max?: number
+
     className?: string
 }
 
-const Rating = ({ rating, max = 5, className }: RatingProps) => {
+const Rating = ({ rating, className }: RatingProps) => {
+    const max = 5
     const fullStars = '★'.repeat(rating)
     const emptyStars = '☆'.repeat(max - rating)
     return (

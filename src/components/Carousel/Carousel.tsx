@@ -1,32 +1,27 @@
 'use client'
 import styles from '@/components/Carousel/Carousel.module.scss'
-import { Restaurant } from '@/types'
+import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
-import RestaurantCard from '@/components/RestaurantCard/RestaurantCard'
 
-type CarouselProps = {
-    slides: Restaurant[] | any[],
-    type: 'restaurant' | 'dish'
+type CarouselProps<T> = {
+    slides: T[],
+    renderSlide: (item: T) => React.ReactNode
+    options?: EmblaOptionsType
 }
 
-const Carousel = ({ slides, type }: CarouselProps) => {
-
-    const [emblaRef] = useEmblaCarousel({ dragFree: true })
+const Carousel = <T extends { id: string | number }>({ slides, renderSlide, options = { dragFree: true } }: CarouselProps<T>) => {
+    const [emblaRef] = useEmblaCarousel(options)
 
     return (
         <div className={styles.carousel} ref={emblaRef}>
             <div className={styles.carouselContainer}>
                 {slides.map((item) => (
                     <div className={styles.carouselSlide} key={item.id}>
-                        {type === 'restaurant'
-                            ? <RestaurantCard data={item} />
-                            :
-                            <RestaurantCard data={item} />}
+                        {renderSlide(item)}
                     </div>
                 ))}
             </div>
         </div>
-
     )
 }
 export default Carousel
