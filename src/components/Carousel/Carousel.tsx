@@ -5,7 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import RestaurantCard from '@/components/RestaurantCard/RestaurantCard'
 
 type CarouselProps = {
-    slides: Restaurant[] | any[],
+    slides: Restaurant[],
     type: 'restaurant' | 'dish'
 }
 
