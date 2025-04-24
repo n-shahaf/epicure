@@ -2,7 +2,7 @@ import styles from '@/components/Header/MobileNav.module.scss'
 import clsx from 'clsx'
 import Link from 'next/link'
 import CloseIcon from '@/assets/icons/CloseIcon.svg'
-import { NAV_LINKS } from '@/constants/header.constant'
+import TEXT from '@/constants/text.constant'
 
 type MobileNavProps = {
     isMenuOpen: boolean
@@ -18,9 +18,9 @@ const MobileNav = ({ isMenuOpen, closeMenu }: MobileNavProps) => {
                 </button>
             </div>
             <ul className={styles.linkList}>
-                {NAV_LINKS.map((link) => (
+                {TEXT.HEADER.links.map((link) => (
                     <li key={link.name} className={styles.linkItem}>
-                        <Link href={link.address}>
+                        <Link href={link.path}>
                             {link.name}
                         </Link>
                     </li>

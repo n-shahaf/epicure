@@ -1,13 +1,13 @@
 import Link from "next/link"
 import styles from "@/components/Footer/Footer.module.scss"
-import { FOOTER_LINKS } from "@/constants/footer.constant"
+import TEXT from "@/constants/text.constant"
 
 const Footer = () => {
     return (
         <footer className={styles.footer}>
             <nav className={styles.nav}>
                 <ul className={styles.navLinks}>
-                    {FOOTER_LINKS.map((link) => (
+                    {TEXT.FOOTER.links.map((link) => (
                         <li key={link.name} className={styles.navItem}>
                             <Link href={link.path}>
                                 {link.name}

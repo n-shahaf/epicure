@@ -4,7 +4,6 @@ import clsx from 'clsx'
 
 type RatingProps = {
     rating: number
-
     className?: string
 }
 

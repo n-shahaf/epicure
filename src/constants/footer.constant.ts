@@ -19,4 +19,4 @@ export const FOOTER_LINKS: readonly FooterLink[] = Object.freeze([
     { name: FooterLinkName.ContactUs, path: FooterLinkPath.Contact },
     { name: FooterLinkName.TermOfUse, path: FooterLinkPath.Terms },
     { name: FooterLinkName.PrivacyPolicy, path: FooterLinkPath.Privacy },
-])
+] as const)
