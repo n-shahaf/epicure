@@ -2,8 +2,8 @@ import { homeData } from "@/data/home.data"
 import delay from "@/utils/delay"
 import { NextResponse } from 'next/server'
 
-export function GET() {
-    delay(300)
+export async function GET() {
+    await delay(300)
     try {
         return NextResponse.json(homeData, { status: 200 })
     } catch (error) {

@@ -1,9 +1,12 @@
 import Hero from "@/components/Hero/Hero"
 import PopularSection from "@/components/PopularSection/PopularSection"
+import { getHomeData } from "@/services/api.service"
 
 const HomePage = async () => {
-  const res = await fetch(`http://localhost:3000/api/home`)
-  const homeData = await res.json()
+  const homeData = await getHomeData()
+  if (!homeData) {
+    return <div>Error loading data</div>
+  }
 
   return (
     <div>

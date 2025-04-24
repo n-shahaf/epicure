@@ -3,8 +3,8 @@ import delay from '@/utils/delay'
 import { NextResponse } from 'next/server'
 
 
-export function GET(_: Request, { params }: { params: { id: string } }) {
-    delay(300)
+export async function GET(_: Request, { params }: { params: { id: string } }) {
+    await delay(300)
 
     try {
         const { id } = params

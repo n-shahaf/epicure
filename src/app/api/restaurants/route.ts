@@ -2,8 +2,8 @@ import { restaurants } from '@/data/restaurants.data'
 import delay from '@/utils/delay'
 import { NextResponse } from 'next/server'
 
-export function GET() {
-    delay(300)
+export async function GET() {
+    await delay(300)
 
     try {
         return NextResponse.json(restaurants, { status: 200 })
