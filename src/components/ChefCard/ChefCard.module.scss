@@ -1,0 +1,47 @@
+.card {
+    position: relative;
+    width: 335px;
+    height: 262px;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 51px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+@media (min-width: 768px) {
+    .card {
+        width: 378px;
+        height: 338px;
+    }
+
+    .content {
+        height: 78px;
+    }
+
+    .text {
+        font-size: 40px;
+    }
+}

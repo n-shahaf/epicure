@@ -10,6 +10,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    margin-bottom: 48px;
 }
 
 .content {
@@ -60,10 +62,11 @@
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
     .heroSection {
         background-image: url('/images/hero_desktop.png');
         height: 676px;
+        margin-bottom: 80px;
     }
 
     .content {
