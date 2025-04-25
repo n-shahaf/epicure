@@ -1,23 +1,30 @@
 'use client'
 import styles from '@/components/PopularSection/PopularSection.module.scss'
-import { Restaurant } from "@/types"
 import RightArrow from '@/assets/icons/RightArrowIcon.svg'
 import Link from "next/link"
 import Carousel from "@/components/Carousel/Carousel"
-import RestaurantCard from '../RestaurantCard/RestaurantCard'
-import TEXT from '@/constants/text.constant'
 
-type PopularSectionProps = {
-    restaurants: Restaurant[]
+type PopularSectionProps<T extends { id: string | number }> = {
+    title: string
+    items: T[]
+    renderItem: (item: T) => React.ReactNode
+    linkText: string
+    linkHref: string
 }
 
-const PopularSection = ({ restaurants }: PopularSectionProps) => {
+const PopularSection = <T extends { id: string | number }>({ 
+    title, 
+    items, 
+    renderItem, 
+    linkText, 
+    linkHref 
+}: PopularSectionProps<T>) => {
     return (
         <div className={styles.section}>
-            <h2 className={styles.title}>{TEXT.HOME.POPULAR.title}</h2>
-            <Carousel slides={restaurants} renderSlide={(restaurant) => <RestaurantCard data={restaurant} />} />
-            <Link href={TEXT.HOME.POPULAR.href} className={styles.link}>
-                <span className={styles.text}>{TEXT.HOME.POPULAR.linkText}</span>
+            <h2 className={styles.title}>{title}</h2>
+            <Carousel slides={items} renderSlide={renderItem} />
+            <Link href={linkHref} className={styles.link}>
+                <span className={styles.text}>{linkText}</span>
                 <RightArrow className={styles.arrowIcon} />
             </Link>
         </div>

@@ -14,7 +14,16 @@ export const restaurants: Restaurant[] = [
         priceRange: { min: 100, max: 300 },
         distance: 2.5,
         menu: {
-            breakfast: [], lunch: [], dinner: []
+            breakfast: [
+                {
+                    id: 1,
+                    name: "Breakfast",
+                    price: 100,
+                    imageUrl: "/images/dishes/breakfast.png",
+                    ingredients: ["ingredient1", "ingredient2", "ingredient3"],
+                    type: "spicy"
+                }
+            ], lunch: [], dinner: []
         }
     },
     {

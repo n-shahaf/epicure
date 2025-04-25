@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero/Hero"
-import PopularSection from "@/components/PopularSection/PopularSection"
+import PopularSectionClient from "@/components/PopularSection/PopularSectionClient"
+import DishesSectionClient from "@/components/DishesSection/DishesSectionClient"
 import { getHomeData } from "@/services/api.service"
 
 const HomePage = async () => {
@@ -11,7 +12,8 @@ const HomePage = async () => {
   return (
     <div>
       <Hero />
-      <PopularSection restaurants={homeData.restaurants} />
+      <PopularSectionClient restaurants={homeData.restaurants} />
+      <DishesSectionClient dishes={homeData.restaurants[0].menu.breakfast} />
     </div>
   )
 }
