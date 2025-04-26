@@ -1,3 +1,4 @@
+import AboutSection from "@/components/AboutSection/AboutSection"
 import ChefSection from "@/components/ChefSection/ChefSection"
 import Hero from "@/components/Hero/Hero"
 import IconSection from "@/components/IconSection/IconSection"
@@ -16,6 +17,7 @@ const HomePage = async () => {
       <PopularSection restaurants={homeData.restaurants} />
       <IconSection />
       <ChefSection chef={homeData.chefOfTheWeek} />
+      <AboutSection />
     </div>
   )
 }
