@@ -32,6 +32,9 @@ const TEXT = Object.freeze({
             { name: 'Vegetarian', ImageSrc: '/icons/VegetarianIcon.svg' },
             { name: 'Vegan', ImageSrc: '/icons/VeganIcon.svg' },]
     },
+    CHEF: {
+        title: 'Chef of the week:',
+    },
     FOOTER: {
         links: [
             { name: 'Contact Us', path: '/contact' },

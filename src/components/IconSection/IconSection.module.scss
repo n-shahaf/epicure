@@ -1,6 +1,7 @@
 .section {
     display: flex;
     flex-direction: column;
+    margin-block: var(--section-margin-block);
     align-items: center;
     padding-block: 24px;
     background-color: var(--clr-secondary-light);

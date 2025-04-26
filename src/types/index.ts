@@ -4,6 +4,8 @@ export type Chef = {
     imageUrl: string
     views: number
     isNew: boolean
+    description: string
+    restaurants: string[] | Restaurant[] // restaurantRefIds populated to Restaurants[] durin api call
 }
 
 export type Restaurant = {
