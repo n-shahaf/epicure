@@ -25,6 +25,13 @@ const TEXT = Object.freeze({
             linkText: 'All Restaurants',
         }
     },
+    ICONS: {
+        heading: 'The meaning of our icons:',
+        list: [
+            { name: 'Spicy', ImageSrc: '/icons/SpicyIcon.svg' },
+            { name: 'Vegetarian', ImageSrc: '/icons/VegetarianIcon.svg' },
+            { name: 'Vegan', ImageSrc: '/icons/VeganIcon.svg' },]
+    },
     FOOTER: {
         links: [
             { name: 'Contact Us', path: '/contact' },
