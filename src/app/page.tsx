@@ -1,8 +1,8 @@
 import AboutSection from "@/components/AboutSection/AboutSection"
+import CarouselClientWrapper from "@/components/CarouselClientWrapper/CarouselClientWrapper"
 import ChefSection from "@/components/ChefSection/ChefSection"
 import Hero from "@/components/Hero/Hero"
 import IconSection from "@/components/IconSection/IconSection"
-import PopularSection from "@/components/PopularSection/PopularSection"
 import { getHomeData } from "@/services/api.service"
 
 const HomePage = async () => {
@@ -14,7 +14,7 @@ const HomePage = async () => {
   return (
     <div>
       <Hero />
-      <PopularSection restaurants={homeData.restaurants} />
+      <CarouselClientWrapper restaurants={homeData.restaurants} />
       <IconSection />
       <ChefSection chef={homeData.chefOfTheWeek} />
       <AboutSection />

@@ -19,6 +19,7 @@ const TEXT = Object.freeze({
         DISH: {
             title: 'Signature dish of:',
             linkText: 'All Restaurants',
+            href: '/restaurants',
         },
         ICON: {
             title: 'the',
