@@ -5,35 +5,55 @@ import SearchIcon from '@/assets/icons/SearchIcon.svg'
 import UserIcon from '@/assets/icons/UserIcon.svg'
 import BagIcon from '@/assets/icons/BagIcon.svg'
 import Logo from '@/assets/icons/Logo.svg'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import clsx from 'clsx'
+import Link from 'next/link'
+import TEXT from '@/constants/text.constant'
 
 type NavBarProps = {
     openMenu: () => void
+    setIsSearchOpen: (isOpen: boolean) => void
 }
 
-const NavBar = ({ openMenu }: NavBarProps) => {
+const NavBar = ({ openMenu, setIsSearchOpen }: NavBarProps) => {
     const router = useRouter()
+    const pathname = usePathname()
+
     return (
-        <nav className={styles.navbar}>
-            <button className='icon-button-wrapper' onClick={openMenu} >
-                <HamburgerIcon className={styles.menuIcon} />
-            </button>
-            <button className={'icon-button-wrapper'} onClick={() => router.push('/')} >
-                <Logo className={styles.logoIcon} />
-            </button>
-            <div className={styles.iconGroup}>
-                <button className='icon-button-wrapper'>
-                    <SearchIcon />
+        <>
+            <nav className={clsx(styles.navbar)}>
+
+                <button className={clsx(styles.btn, styles.menuButton)} onClick={openMenu} >
+                    <HamburgerIcon className={styles.menuIcon} />
                 </button>
-                <button className='icon-button-wrapper'>
-                    <UserIcon />Í
-                </button>
-                <button className='icon-button-wrapper'>
-                    <BagIcon />
-                </button>
-            </div>
-        </nav>
+
+                <div className={styles.logoGroup}>
+                    <button className={clsx(styles.btn, styles.logoButton)} onClick={() => router.push('/')} >
+                        <Logo className={styles.logoIcon} />
+                        <span>{TEXT.HEADER.logoText}</span>
+                    </button>
+                    {TEXT.HEADER.links.map((link) => (
+                        <Link key={link.name} href={link.path} className={clsx({ [styles.active]: pathname === link.path })}>
+                            {link.name}
+                        </Link>
+                    ))}
+                </div>
+
+                <div className={styles.iconGroup}>
+                    <button className={clsx(styles.btn, styles.searchButton)} onClick={() => setIsSearchOpen(true)}>
+                        <SearchIcon />
+                    </button>
+
+                    <button className={clsx(styles.btn, styles.userButton)}>
+                        <UserIcon />
+                    </button>
+
+                    <button className={clsx(styles.btn, styles.bagButton)}>
+                        <BagIcon />
+                    </button>
+                </div>
+            </nav>
+        </>
     )
 }
 export default NavBar

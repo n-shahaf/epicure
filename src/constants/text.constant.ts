@@ -1,9 +1,10 @@
 
 const TEXT = Object.freeze({
     HEADER: {
+        logoText: 'EPICURE',
         links: [
             { name: 'Restaurants', path: '/restaurants' },
-            { name: 'Dishes', path: '/dishes' }
+            { name: 'Chefs', path: '/chefs' }
         ]
     },
     HOME: {
@@ -35,6 +36,10 @@ const TEXT = Object.freeze({
     RESTAURANT_CARD: {
         altText: 'Restaurant Image',
     },
+    SEARCH_MODAL: {
+        title: 'Search',
+        placeholder: 'Search for restaurant cuisine, chef',
+    }
 } as const)
 
 export default TEXT
