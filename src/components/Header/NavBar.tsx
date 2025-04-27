@@ -6,6 +6,7 @@ import UserIcon from '@/assets/icons/UserIcon.svg'
 import BagIcon from '@/assets/icons/BagIcon.svg'
 import Logo from '@/assets/icons/Logo.svg'
 import { useRouter } from 'next/navigation'
+import clsx from 'clsx'
 
 type NavBarProps = {
     openMenu: () => void
@@ -18,7 +19,7 @@ const NavBar = ({ openMenu }: NavBarProps) => {
             <button className='icon-button-wrapper' onClick={openMenu} >
                 <HamburgerIcon className={styles.menuIcon} />
             </button>
-            <button className='icon-button-wrapper' onClick={() => router.push('/')} >
+            <button className={'icon-button-wrapper'} onClick={() => router.push('/')} >
                 <Logo className={styles.logoIcon} />
             </button>
             <div className={styles.iconGroup}>
