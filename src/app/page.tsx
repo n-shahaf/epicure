@@ -14,7 +14,7 @@ const HomePage = async () => {
   return (
     <div>
       <Hero />
-      <CarouselClientWrapper restaurants={homeData.restaurants} />
+      <CarouselClientWrapper restaurants={homeData.restaurants} dishes={homeData.dishes} />
       <IconSection />
       <ChefSection chef={homeData.chefOfTheWeek} />
       <AboutSection />

@@ -1,3 +1,4 @@
+import { VegetarianIcon } from '/icons/VegetarianIcon.svg'
 export type Chef = {
     id: number
     name: string
@@ -23,11 +24,14 @@ export type Restaurant = {
     menu: { breakfast: Dish[], lunch: Dish[], dinner: Dish[] },
 }
 
+
 export type Dish = {
     id: number,
     name: string,
     imageUrl: string,
     price: number,
     ingredients: string[],
-    type: 'spicy' | 'vegetarian' | 'vegan',
+    type: { name: string, iconUrl: string },
 }
+
+
