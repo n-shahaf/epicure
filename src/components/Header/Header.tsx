@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <NavBar openMenu={() => toggleMenu(true)} setIsSearchOpen={setIsSearchOpen} />
+            <NavBar openMenu={() => toggleMenu(true)} setIsSearchOpen={setIsSearchOpen} setIsCartOpen={setIsCartOpen} />
             <MobileNav isMenuOpen={isMenuOpen} closeMenu={() => toggleMenu(false)} />
             <SearchModal isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />
             <CartModal isOpen={isCartOpen} toggleModal={(state: boolean) => setIsCartOpen(!state)} />

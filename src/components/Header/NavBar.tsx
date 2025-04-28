@@ -12,10 +12,11 @@ import TEXT from '@/constants/text.constant'
 
 type NavBarProps = {
     openMenu: () => void
-    setIsSearchOpen: (isOpen: boolean) => void
+    setIsSearchOpen: React.Dispatch<React.SetStateAction<boolean>>
+    setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const NavBar = ({ openMenu, setIsSearchOpen }: NavBarProps) => {
+const NavBar = ({ openMenu, setIsSearchOpen, setIsCartOpen }: NavBarProps) => {
     const router = useRouter()
     const pathname = usePathname()
 
@@ -48,7 +49,7 @@ const NavBar = ({ openMenu, setIsSearchOpen }: NavBarProps) => {
                         <UserIcon />
                     </button>
 
-                    <button className={clsx(styles.btn, styles.bagButton)}>
+                    <button className={clsx(styles.btn, styles.bagButton)} onClick={() => setIsCartOpen((prev) => !prev)}>
                         <BagIcon />
                     </button>
                 </div>

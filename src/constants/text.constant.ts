@@ -39,6 +39,10 @@ const TEXT = Object.freeze({
     SEARCH_MODAL: {
         title: 'Search',
         placeholder: 'Search for restaurant cuisine, chef',
+    },
+    CART_MODAL: {
+        title: 'Your bag is empty',
+        buttonText: 'Order History',
     }
 } as const)
 
