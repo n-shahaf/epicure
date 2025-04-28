@@ -1,0 +1,41 @@
+.list {
+    display: flex;
+    gap: 21px;
+    margin-bottom: 38px;
+
+    .listItem {
+        &.active {
+            border-bottom: 1px solid var(--clr-secondary-dark);
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        color: #000;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .list {
+        margin-block: 40px;
+
+        .listItem {
+            &.active {
+                border: none;
+
+                button {
+                    font-weight: 700;
+                }
+            }
+
+
+
+        }
+    }
+}

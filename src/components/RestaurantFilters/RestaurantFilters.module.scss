@@ -1,0 +1,42 @@
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: var(--clr-secondary-light);
+
+    .listItem {
+        position: relative;
+        height: 100%;
+
+        &:hover {
+            background-color: var(--clr-secondary);
+        }
+
+        &.open {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+
+        animation: rotate 0.5s ease-in-out;
+    }
+
+    button {
+        height: 100%;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            rotate: -90deg;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        display: none;
+    }
+}

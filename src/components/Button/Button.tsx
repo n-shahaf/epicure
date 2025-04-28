@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { ButtonHTMLAttributes } from 'react'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: 'primary' | 'secondary',
+    variant?: 'primary' | 'secondary' | 'clear',
     className?: string,
     children: React.ReactNode,
     disabled?: boolean,

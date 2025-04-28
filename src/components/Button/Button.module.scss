@@ -9,6 +9,12 @@
 
 }
 
+.clear {
+    background-color: transparent;
+    border: none;
+    color: var(--clr-primary);
+}
+
 .primary {
     background-color: var(--clr-primary);
 

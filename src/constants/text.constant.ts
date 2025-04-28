@@ -35,6 +35,11 @@ const TEXT = Object.freeze({
     RESTAURANT_CARD: {
         altText: 'Restaurant Image',
     },
+    RESTAURANT_PAGE: {
+        title: 'Restaurants',
+        paramsList: ['All', 'New', 'Most Popular', 'Open Now'],
+        filters: [{ name: 'Price Range', title: 'Price Range Selected' }, { name: 'Distance', title: 'Distance' }, { name: 'Rating', title: 'Rating' }],
+    }
 } as const)
 
 export default TEXT
