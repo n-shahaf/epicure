@@ -12,11 +12,11 @@ import TEXT from '@/constants/text.constant'
 
 type NavBarProps = {
     openMenu: () => void
-    setIsSearchOpen: React.Dispatch<React.SetStateAction<boolean>>
-    setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>
+    toggleSearch: (state?: boolean) => void
+    toggleCart: (state?: boolean) => void
 }
 
-const NavBar = ({ openMenu, setIsSearchOpen, setIsCartOpen }: NavBarProps) => {
+const NavBar = ({ openMenu, toggleSearch, toggleCart }: NavBarProps) => {
     const router = useRouter()
     const pathname = usePathname()
 
@@ -41,7 +41,7 @@ const NavBar = ({ openMenu, setIsSearchOpen, setIsCartOpen }: NavBarProps) => {
                 </div>
 
                 <div className={styles.iconGroup}>
-                    <button className={clsx(styles.btn, styles.searchButton)} onClick={() => setIsSearchOpen(true)}>
+                    <button className={clsx(styles.btn, styles.searchButton)} onClick={() => toggleSearch(true)}>
                         <SearchIcon />
                     </button>
 
@@ -49,7 +49,7 @@ const NavBar = ({ openMenu, setIsSearchOpen, setIsCartOpen }: NavBarProps) => {
                         <UserIcon />
                     </button>
 
-                    <button className={clsx(styles.btn, styles.bagButton)} onClick={() => setIsCartOpen((prev) => !prev)}>
+                    <button className={clsx(styles.btn, styles.bagButton)} onClick={() => toggleCart()}>
                         <BagIcon />
                     </button>
                 </div>

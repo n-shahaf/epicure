@@ -7,7 +7,6 @@ import TEXT from '@/constants/text.constant'
 
 type CartModalProps = {
     isOpen: boolean
-    toggleModal: (state: boolean) => void
 }
 
 const CartModal = ({ isOpen }: CartModalProps) => {

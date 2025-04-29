@@ -6,14 +6,14 @@ import TEXT from '@/constants/text.constant'
 
 type SearchModalProps = {
     isOpen: boolean
-    setIsOpen: (isOpen: boolean) => void
+    toggleSearch: (isOpen: boolean) => void
 }
 
-const SearchModal = ({ isOpen, setIsOpen }: SearchModalProps) => {
+const SearchModal = ({ isOpen, toggleSearch }: SearchModalProps) => {
     return (
         <div className={clsx(styles.modal, { [styles.open]: isOpen })}>
             <div className={styles.heading}>
-                <button onClick={() => setIsOpen(false)} className='icon-button-wrapper'>
+                <button onClick={() => toggleSearch(false)} className='icon-button-wrapper'>
                     <CloseIcon className={styles.closeIcon} />
                 </button>
                 <h2>{TEXT.SEARCH_MODAL.title}</h2>
