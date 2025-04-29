@@ -22,9 +22,9 @@ const Header = () => {
     }, [])
 
 
-    const toggleMenu = useCallback(createToggleHandler(setIsMenuOpen), [createToggleHandler])
-    const toggleSearch = useCallback(createToggleHandler(setIsSearchOpen), [createToggleHandler])
-    const toggleCart = useCallback(createToggleHandler(setIsCartOpen), [createToggleHandler])
+    const toggleMenu = createToggleHandler(setIsMenuOpen)
+    const toggleSearch = createToggleHandler(setIsSearchOpen)
+    const toggleCart = createToggleHandler(setIsCartOpen)
 
     return (
         <header className={styles.header}>
