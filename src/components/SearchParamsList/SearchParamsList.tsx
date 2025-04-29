@@ -12,7 +12,7 @@ const SearchParamsList = () => {
 
     const handleClick = (param: string) => {
         const params = new URLSearchParams(searchParams.toString())
-        params.set('q', param) // Set the 'q' search parameter
+        params.set('q', param)
         router.push(`/restaurants?${params.toString().toLowerCase()}`) // Update the URL
     }
 
