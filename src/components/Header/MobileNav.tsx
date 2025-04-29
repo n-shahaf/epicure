@@ -27,7 +27,7 @@ const MobileNav = ({ isMenuOpen, closeMenu }: MobileNavProps) => {
                     </li>
                 ))}
             </ul>
-            <Footer />
+            <Footer as='div' />
         </nav>
     )
 }

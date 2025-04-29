@@ -2,9 +2,14 @@ import Link from "next/link"
 import styles from "@/components/Footer/Footer.module.scss"
 import TEXT from "@/constants/text.constant"
 
-const Footer = () => {
+type FooterProps = {
+    as?: 'footer' | 'div' | 'section'
+}
+
+
+const Footer = ({ as: Tag = 'footer' }: FooterProps) => {
     return (
-        <footer className={styles.footer}>
+        <Tag className={styles.footer}>
             <nav className={styles.nav}>
                 <ul className={styles.navLinks}>
                     {TEXT.FOOTER.links.map((link) => (
@@ -16,7 +21,7 @@ const Footer = () => {
                     ))}
                 </ul>
             </nav>
-        </footer>
+        </Tag>
     )
 }
 export default Footer
