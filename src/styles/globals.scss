@@ -1,5 +1,5 @@
-@import '../styles/vars.css';
-@import '../styles/reset.css';
+@use '../styles/vars.scss';
+@use '../styles/reset.scss';
 
 .main-container {
     padding: 20px;
@@ -7,7 +7,6 @@
     min-height: 100vh;
     background-color: whitesmoke;
 }
-
 
 .icon {
     cursor: pointer;

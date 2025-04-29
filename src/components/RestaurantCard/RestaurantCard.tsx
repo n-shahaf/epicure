@@ -4,10 +4,11 @@ import { Restaurant } from '@/types'
 import Image from 'next/image'
 import Rating from '@/components/Rating/Rating'
 import TEXT from '@/constants/text.constant'
+import clsx from 'clsx'
 
-const RestaurantCard = ({ data: restaurant }: { data: Restaurant }) => {
+const RestaurantCard = ({ data: restaurant, size }: { data: Restaurant, size?: 'small' }) => {
     return (
-        <div className={styles.card}>
+        <div className={clsx(styles.card, size && styles[size])}>
             <Image src={restaurant.imageUrl} alt={`${restaurant.name} ${TEXT.RESTAURANT_CARD.altText}`} width={335} height={207} />
             <div className={styles.content}>
                 <Heading as='h2' variant='h3' className={styles.title}>{restaurant.name}</Heading>

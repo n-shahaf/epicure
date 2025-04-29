@@ -8,14 +8,47 @@
         cursor: pointer;
     }
 
-    .menuIcon {
-        width: 24px;
-        height: 24px;
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background: none;
     }
 
-    .logoIcon {
-        width: 32px;
-        height: 32px;
+    .menuButton {
+        order: 0;
+
+        .menuIcon {
+            width: 24px;
+            height: 24px;
+            margin-right: 80px;
+        }
+    }
+
+    .logoGroup {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        .logoButton {
+            order: 0;
+
+            .logoIcon {
+                width: 32px;
+                height: 32px;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        a {
+            display: none;
+            font-size: 18px;
+            font-weight: 200;
+        }
     }
 
     .iconGroup {
@@ -29,4 +62,52 @@
         }
     }
 
+}
+
+.active {
+    box-shadow: inset 0 -2px 0 var(--clr-secondary-dark);
+    padding-block: 8px;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+
+        .menuButton {
+            display: none;
+        }
+
+        .logoGroup {
+            .logoButton {
+                order: 0;
+
+                .logoIcon {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                span {
+                    display: inline-block;
+                }
+            }
+
+            a {
+                display: inline-block;
+            }
+        }
+
+        .logoButton {
+            display: flex;
+            gap: 15px;
+            font-size: 27px;
+            font-weight: 200;
+
+            .logoIcon {}
+
+            span {
+                color: black;
+                display: none;
+                display: inline-block;
+            }
+        }
+    }
 }

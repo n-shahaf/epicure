@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import CloseIcon from '@/assets/icons/CloseIcon.svg'
 import TEXT from '@/constants/text.constant'
+import Footer from '../Footer/Footer'
 
 type MobileNavProps = {
     isMenuOpen: boolean
@@ -26,6 +27,7 @@ const MobileNav = ({ isMenuOpen, closeMenu }: MobileNavProps) => {
                     </li>
                 ))}
             </ul>
+            <Footer as='div' />
         </nav>
     )
 }

@@ -37,7 +37,14 @@
 
 @media (min-width: 768px) {
     :root {
-        --section-padding-inline: 40px;
+        --section-padding-inline: 60px;
+        --section-margin-block: 0 80px;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --section-padding-inline: 127.5px;
         --section-margin-block: 0 80px;
     }
 }
