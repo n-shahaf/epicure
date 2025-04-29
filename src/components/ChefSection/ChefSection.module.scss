@@ -1,0 +1,83 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-inline: var(--section-padding-inline);
+    margin-block: var(--section-margin-block);
+
+    .heading {
+        font-size: 18px;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    .chefContent {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+
+        .card {
+            margin-bottom: 24px;
+            max-width: 340px;
+            width: 100%;
+        }
+
+        .description {
+            font-size: 18px;
+            font-weight: 200;
+
+        }
+    }
+
+    .carouselContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+
+        .subHeading {
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 200;
+            margin-bottom: 16px;
+        }
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    .section {
+        align-items: center;
+
+        .heading {
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chefContent {
+            flex-direction: row;
+            gap: 63.5px;
+            margin-bottom: 45px;
+
+            .card {
+                display: flex;
+                flex-shrink: 0;
+            }
+
+            .description {
+                padding-top: 20px;
+                font-size: 24px;
+            }
+        }
+
+        .carouselContainer {
+            gap: 40px;
+
+            .subHeading {
+                font-size: 30px;
+            }
+        }
+    }
+}

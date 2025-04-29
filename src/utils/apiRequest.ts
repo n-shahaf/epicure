@@ -11,6 +11,7 @@ export enum API_ENDPOINT {
   RESTAURANTS = "/restaurants",
   CHEFS = "/chefs",
   HOME = "/home",
+  CHEF_OF_THE_WEEK = "/chef-of-the-week",
 }
 
 export const apiRequest = async (endpoint: string, method: API_METHOD = API_METHOD.GET, options?: RequestInit) => {

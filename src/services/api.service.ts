@@ -25,3 +25,5 @@ export const getChefById = async (id: string) => {
     return apiRequest(`${API_ENDPOINT.CHEFS}/${id}`, API_METHOD.GET)
 }
 
+
+
