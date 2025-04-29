@@ -47,12 +47,12 @@ const TEXT = Object.freeze({
         title: 'About Us',
         p1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non eu ipsum. Cras porta malesuada eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna sodales porta. Vivamus elit urna, dignissim a vestibulum.',
         p2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no eu ipsum. Cras porta malesuada eros.',
-        logoSrc: '/icons/FullLogoIcon.svg',
-        logoAlt: 'Epicure Logo',
-        appStoreSrc: '/icons/AppStoreIcon.svg',
-        appStoreAlt: 'Apple app store icon',
-        googleStoreSrc: '/icons/GooglePlayIcon.svg',
-        googleStoreAlt: 'google play store icon',
+        logo: { src: '/icons/FullLogoIcon.svg', alt: 'Epicure Logo' },
+        storeIcons: [
+            { src: '/icons/AppStoreIcon.svg', alt: 'Apple app store icon' },
+            { src: '/icons/GooglePlayIcon.svg', alt: 'google play store icon' }
+        ],
+
     },
     RESTAURANT_CARD: {
         altText: 'Restaurant Image',

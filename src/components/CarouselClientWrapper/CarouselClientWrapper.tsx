@@ -5,7 +5,6 @@ import RestaurantCard from "@/components/RestaurantCard/RestaurantCard"
 import TEXT from "@/constants/text.constant"
 import DishCard from "../DishCard/DishCard"
 
-//TODO: dish card
 
 type CarouselClientWrapperProps = {
     restaurants: Restaurant[]

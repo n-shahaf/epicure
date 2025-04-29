@@ -28,9 +28,9 @@ const DishCard = ({ dish }: DishCardProps) => {
                 </div>
                 <p className={styles.ingredients}>{dish.ingredients.join(', ')}</p>
                 <div className={styles.price}>
-                    <span className={styles.line}></span>
+                    <span className={styles.line} />
                     <span>&#8362;</span>{dish.price}
-                    <span className={styles.line}></span>
+                    <span className={styles.line} />
                 </div>
             </div>
 
