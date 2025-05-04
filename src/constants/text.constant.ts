@@ -1,3 +1,4 @@
+import { restaurants } from './../data/restaurants.data'
 
 const TEXT = Object.freeze({
     HEADER: {
@@ -60,6 +61,7 @@ const TEXT = Object.freeze({
     },
     RESTAURANT_PAGE: {
         title: 'Restaurants',
+        endpoint: '/restaurants',
         paramsList: ['All', 'New', 'Most Popular', 'Open Now'],
         filters: [{ name: 'Price Range', title: 'Price Range Selected' }, { name: 'Distance', title: 'Distance' }, { name: 'Rating', title: 'Rating' }],
     },
@@ -70,7 +72,12 @@ const TEXT = Object.freeze({
     CART_MODAL: {
         title: 'Your bag is empty',
         buttonText: 'Order History',
-    }
+    },
+    CHEFS_PAGE: {
+        title: 'Chefs',
+        endpoint: '/chefs',
+        paramsList: ['All', 'New', 'Most Viewed'],
+    },
 } as const)
 
 export default TEXT

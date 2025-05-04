@@ -3,9 +3,13 @@ import styles from '@/components/SearchParamsList/SearchParamsList.module.scss'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 import clsx from 'clsx'
-import TEXT from '@/constants/text.constant'
 
-const SearchParamsList = () => {
+type SearchParamsListProps = {
+    endpoint: string
+    paramsList: readonly string[]
+}
+
+const SearchParamsList = ({ endpoint, paramsList }: SearchParamsListProps) => {
     const router = useRouter()
     const searchParams = useSearchParams()
     const currentSearchParam = searchParams.get('q') || 'All'
@@ -13,7 +17,7 @@ const SearchParamsList = () => {
     const handleClick = (param: string) => {
         const params = new URLSearchParams(searchParams.toString())
         params.set('q', param)
-        router.push(`/restaurants?${params.toString().toLowerCase()}`) // Update the URL
+        router.push(`${endpoint}?${params.toString().toLowerCase()}`) // Update the URL
     }
 
     const isActive = (option: string) => {
@@ -22,7 +26,7 @@ const SearchParamsList = () => {
 
     return (
         <ul className={styles.list}>
-            {TEXT.RESTAURANT_PAGE.paramsList.map((option) => (
+            {paramsList.map((option) => (
                 <li key={option} className={clsx(styles.listItem, isActive(option) && styles.active)}>
                     <button onClick={() => handleClick(option)}>{option}</button>
                 </li>
