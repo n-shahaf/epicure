@@ -7,7 +7,6 @@ export const getHomeData = async () => {
 
 
 export const getRestaurants = async (q: string) => {
-    console.log("q", q)
     if (!q) {
         return apiRequest(API_ENDPOINT.RESTAURANTS, API_METHOD.GET)
     }

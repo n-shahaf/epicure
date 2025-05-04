@@ -2,20 +2,32 @@ import { restaurants } from '@/data/restaurants.data'
 import delay from '@/utils/delay'
 import { NextResponse } from 'next/server'
 
+enum QueryOptions {
+    MOST_POPULAR = 'most popular',
+    NEW = 'new',
+    OPEN_NOW = 'open now',
+    ALL = 'all',
+}
+
 export async function GET(request: Request) {
     await delay(300)
     const { searchParams } = new URL(request.url)
-
+    const query = (searchParams.get('q') as QueryOptions) || QueryOptions.ALL
     let filteredRestaurants = restaurants
 
-    if (searchParams.has('q')) {
-        const filter = searchParams.get('q')
-        if (filter === 'most popular') {
-            filteredRestaurants = restaurants.filter((restaurant) => restaurant.isPopular)
-        } else if (filter === 'new') {
-            filteredRestaurants = restaurants.filter((restaurant) => restaurant.isNew)
-        } else if (filter === 'open now') {
-            filteredRestaurants = restaurants.filter((restaurant) => restaurant.isOpen)
+    if (query) {
+        switch (query) {
+            case QueryOptions.MOST_POPULAR:
+                filteredRestaurants = restaurants.filter((restaurant) => restaurant.isPopular)
+                break
+            case QueryOptions.NEW:
+                filteredRestaurants = restaurants.filter((restaurant) => restaurant.isNew)
+                break
+            case QueryOptions.OPEN_NOW:
+                filteredRestaurants = restaurants.filter((restaurant) => restaurant.isOpen)
+                break
+            default:
+                break
         }
     }
 
