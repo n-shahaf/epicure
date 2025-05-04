@@ -1,6 +1,6 @@
 'use client'
 import styles from '@/components/ChefSection/ChefSection.module.scss'
-import { ChefCard } from '../ChefCard/ChefCard'
+import ChefCard from '../ChefCard/ChefCard'
 import { Chef, Restaurant } from '@/types'
 import TEXT from '@/constants/text.constant'
 import Carousel from '../Carousel/Carousel'

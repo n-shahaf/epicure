@@ -1,0 +1,20 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+@media (min-width: 1024px) {
+    .list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 850px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .list {
+        max-width: 1224px;
+    }
+}
