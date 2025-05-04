@@ -41,7 +41,7 @@ const NavBar = ({ openMenu, toggleSearch, toggleCart }: NavBarProps) => {
                 </div>
 
                 <div className={styles.iconGroup}>
-                    <button className={clsx(styles.btn, styles.searchButton)} onClick={() => toggleSearch(true)}>
+                    <button className={clsx(styles.btn, styles.searchButton)} onClick={() => toggleSearch()}>
                         <SearchIcon />
                     </button>
 
