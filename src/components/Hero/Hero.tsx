@@ -1,5 +1,6 @@
 import styles from '@/components/Hero/Hero.module.scss'
 import TEXT from '@/constants/text.constant'
+import SearchIcon from '@/assets/icons/SearchIcon.svg'
 const Hero = () => {
 
     return (
@@ -10,6 +11,7 @@ const Hero = () => {
                 </div>
                 <div className={styles.inputWrapper}>
                     <input type="text" placeholder={TEXT.HOME.HERO.placeholder} />
+                    <SearchIcon className={styles.searchIcon} />
                 </div>
             </div>
         </div>

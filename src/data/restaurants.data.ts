@@ -7,7 +7,7 @@ export const restaurants: Restaurant[] = [
         name: "claro",
         chefName: "Ran Shmueli",
         isOpen: true,
-        rating: 2,
+        rating: 4,
         location: { lat: 32.071, lng: 34.769 },
         isNew: false,
         isPopular: true,
@@ -19,13 +19,13 @@ export const restaurants: Restaurant[] = [
     },
     {
         id: 2,
-        imageUrl: "/images/restaurants/kab_kem.png",
-        name: "Kab Kam",
-        chefName: "Yariv Malili",
+        imageUrl: "/images/restaurants/lumina.png",
+        name: "lumina",
+        chefName: "Meir Adoni",
         isOpen: true,
-        rating: 1,
+        rating: 3,
         location: { lat: 32.071, lng: 34.769 },
-        isNew: false,
+        isNew: true,
         isPopular: true,
         priceRange: { min: 100, max: 300 },
         distance: 2.5,
@@ -35,11 +35,11 @@ export const restaurants: Restaurant[] = [
     },
     {
         id: 3,
-        imageUrl: "/images/restaurants/messa.png",
-        name: "Messa",
-        chefName: "Aviv Moshe",
+        imageUrl: "/images/restaurants/tiger_lily.png",
+        name: "Tiger Lily",
+        chefName: "Yanir Green",
         isOpen: true,
-        rating: 3,
+        rating: 4,
         location: { lat: 32.071, lng: 34.769 },
         isNew: false,
         isPopular: true,
@@ -51,6 +51,38 @@ export const restaurants: Restaurant[] = [
     },
     {
         id: 4,
+        imageUrl: "/images/restaurants/kab_kem.png",
+        name: "Kab Kam",
+        chefName: "Yariv Malili",
+        isOpen: true,
+        rating: 1,
+        location: { lat: 32.071, lng: 34.769 },
+        isNew: false,
+        isPopular: false,
+        priceRange: { min: 100, max: 300 },
+        distance: 2.5,
+        menu: {
+            breakfast: [], lunch: [], dinner: []
+        }
+    },
+    {
+        id: 5,
+        imageUrl: "/images/restaurants/messa.png",
+        name: "Messa",
+        chefName: "Aviv Moshe",
+        isOpen: true,
+        rating: 3,
+        location: { lat: 32.071, lng: 34.769 },
+        isNew: false,
+        isPopular: false,
+        priceRange: { min: 100, max: 300 },
+        distance: 2.5,
+        menu: {
+            breakfast: [], lunch: [], dinner: []
+        }
+    },
+    {
+        id: 6,
         imageUrl: "/images/restaurants/nithan_thai.png",
         name: "Nithan Thai",
         chefName: "Shahaf Shabtay",
@@ -65,24 +97,9 @@ export const restaurants: Restaurant[] = [
             breakfast: [], lunch: [], dinner: []
         }
     },
+
     {
-        id: 5,
-        imageUrl: "/images/restaurants/tiger_lily.png",
-        name: "Tiger Lily",
-        chefName: "Yanir Green",
-        isOpen: true,
-        rating: 3,
-        location: { lat: 32.071, lng: 34.769 },
-        isNew: false,
-        isPopular: true,
-        priceRange: { min: 100, max: 300 },
-        distance: 2.5,
-        menu: {
-            breakfast: [], lunch: [], dinner: []
-        }
-    },
-    {
-        id: 6,
+        id: 7,
         imageUrl: "/images/restaurants/yapan.png",
         name: "Yapan",
         chefName: "Yuval Ben Moshe",
@@ -90,7 +107,7 @@ export const restaurants: Restaurant[] = [
         rating: 2,
         location: { lat: 32.071, lng: 34.769 },
         isNew: false,
-        isPopular: true,
+        isPopular: false,
         priceRange: { min: 100, max: 300 },
         distance: 2.5,
         menu: {

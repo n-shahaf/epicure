@@ -48,16 +48,27 @@
     .inputWrapper {
         position: relative;
         width: 100%;
+        max-width: 505px;
 
         input {
             width: 100%;
-            max-width: 505px;
             height: 30px;
-            border: 1px solid black;
+            border: 0.5px solid rgb(0, 0, 0, 0.6);
             border-radius: 4px;
             text-align: center;
             background-color: transparent;
+            outline: none;
 
+            &:focus {
+                border: 0.5px solid rgb(0, 0, 0, 1);
+            }
+        }
+
+        .searchIcon {
+            position: absolute;
+            top: 50%;
+            translate: 0 -50%;
+            left: 10px;
         }
     }
 }

@@ -10,10 +10,10 @@ const TEXT = Object.freeze({
     HOME: {
         HERO: {
             title: 'Epicure works with the top chef restaurants in Tel Aviv',
-            placeholder: 'Search for a restaurant, cuisine or dish',
+            placeholder: 'Search for restaurant, cuisine, chef',
         },
         POPULAR: {
-            title: 'Popular Restaurants',
+            title: 'Popular Restaurants in epicure:',
             linkText: 'All Restaurants',
             href: '/restaurants',
         },

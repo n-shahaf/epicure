@@ -1,14 +1,15 @@
 .section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-inline: var(--section-padding-inline);
+    gap: 18px;
+    padding-inline: var(--section-padding-inline) 0;
     margin-block: var(--section-margin-block);
 
     .title {
         text-transform: uppercase;
         text-align: left;
         font-weight: 200;
+        font-size: 18px;
     }
 
     .link {
@@ -33,10 +34,30 @@
 
 @media (min-width: 768px) {
     .section {
+        gap: 40px;
+
+        .title {
+            font-size: 30px;
+            text-align: center;
+        }
+
         .link {
             justify-content: flex-end;
             font-size: 24px;
+            padding-right: 20px;
         }
     }
+
+}
+
+@media (min-width: 1440px) {
+    .section {
+        padding-inline: var(--section-padding-inline);
+
+        .link {
+            padding-right: 0;
+        }
+    }
+
 
 }
