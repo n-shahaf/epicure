@@ -39,10 +39,11 @@
     :root {
         --section-padding-inline: 60px;
         --section-margin-block: 0 80px;
+        --header-height: 64px;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
     :root {
         --section-padding-inline: 127.5px;
         --section-margin-block: 0 80px;

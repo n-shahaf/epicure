@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     padding-inline: var(--section-padding-inline);
+    border-bottom: 1px solid #AFAFAF40;
 }
 
 @media (min-width: 768px) {

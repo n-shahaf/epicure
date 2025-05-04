@@ -26,7 +26,9 @@
         .description {
             font-size: 18px;
             font-weight: 200;
-
+            text-align: justify;
+            letter-spacing: 1.25px;
+            line-height: 28px;
         }
     }
 
@@ -69,6 +71,8 @@
             .description {
                 padding-top: 20px;
                 font-size: 24px;
+
+                line-height: 35px;
             }
         }
 

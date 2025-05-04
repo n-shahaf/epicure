@@ -71,8 +71,8 @@ export const chefs: Chef[] = [
         imageUrl: "/images/chefs/yossi_shitrit.png",
         views: 350,
         isNew: false,
-        description: "Yossi Shitrit is a prominent Israeli chef known for his bold flavors and innovative dishes. He has gained recognition for his unique culinary style and has opened several successful restaurants.",
-        restaurants: ["4", "5"]
+        description: "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish.",
+        restaurants: ["4", "5", "6"]
     },
     {
         id: 9,
