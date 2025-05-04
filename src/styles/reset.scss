@@ -10,10 +10,14 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
 
+
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     max-width: 1440px;
+    min-height: 100vh;
     margin-inline: auto;
     background: var(--background);
     color: var(--clr-text);
