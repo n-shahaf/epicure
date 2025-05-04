@@ -1,4 +1,4 @@
-import styles from '@/components/RestaurantList/RestaurantList.module.scss'
+import styles from '@/components/ChefList/ChefList.module.scss'
 import ChefCard from '@/components/ChefCard/ChefCard'
 
 import { Chef } from "@/types"
