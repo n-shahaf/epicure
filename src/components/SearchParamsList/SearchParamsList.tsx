@@ -12,7 +12,7 @@ type SearchParamsListProps = {
 const SearchParamsList = ({ endpoint, paramsList }: SearchParamsListProps) => {
     const router = useRouter()
     const searchParams = useSearchParams()
-    const currentSearchParam = searchParams.get('q') || 'All'
+    const currentSearchParam = searchParams.get('q')
 
     const handleClick = (param: string) => {
         const params = new URLSearchParams(searchParams.toString())

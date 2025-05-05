@@ -9,8 +9,7 @@ import TEXT from '@/constants/text.constant'
 
 const RestaurantPage = async ({ searchParams }: { searchParams: { [key: string]: string } }) => {
     const params = await searchParams
-    const q = params.q || 'all'
-    const restaurants = await getRestaurants(q)
+    const restaurants = await getRestaurants(params.q)
     const { endpoint, paramsList, title } = TEXT.RESTAURANT_PAGE
 
     return (
