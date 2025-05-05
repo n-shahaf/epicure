@@ -4,8 +4,9 @@
     align-items: center;
     padding-block: 14px 53px;
     border-bottom: 1px solid #F2F2F2;
+    flex-grow: 1;
 
-    h1 {
+    .title {
         font-size: 18px;
         font-weight: 200;
         text-transform: uppercase;
@@ -15,7 +16,9 @@
 
 @media (min-width: 768px) {
     .container {
-        h1 {
+        padding-block: 0px 53px;
+
+        .title {
             display: none;
         }
 

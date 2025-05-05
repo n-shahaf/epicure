@@ -19,8 +19,11 @@ export const getRestaurantById = async (id: string) => {
 }
 
 
-export const getChefs = async () => {
-    return apiRequest(API_ENDPOINT.CHEFS, API_METHOD.GET)
+export const getChefs = async (q: string) => {
+    if (!q) {
+        return apiRequest(API_ENDPOINT.CHEFS, API_METHOD.GET)
+    }
+    return apiRequest(`${API_ENDPOINT.CHEFS}?q=${q}`, API_METHOD.GET)
 }
 
 
